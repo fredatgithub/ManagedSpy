@@ -99,9 +99,9 @@ namespace ManagedSpy {
 			this.treeWindow.Name = "treeWindow";
 			this.treeWindow.Size = new System.Drawing.Size(242, 406);
 			this.treeWindow.TabIndex = 0;
-			this.treeWindow.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeWindow_BeforeExpand);
-			this.treeWindow.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeWindow_AfterSelect);
-			this.treeWindow.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeWindow_NodeMouseClick);
+			this.treeWindow.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.TreeWindow_BeforeExpand);
+			this.treeWindow.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeWindow_AfterSelect);
+			this.treeWindow.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeWindow_NodeMouseClick);
 			// 
 			// treeMenuStrip
 			// 
@@ -115,7 +115,7 @@ namespace ManagedSpy {
 			this.showWindowToolStripMenuItem.Name = "showWindowToolStripMenuItem";
 			this.showWindowToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
 			this.showWindowToolStripMenuItem.Text = "Show Window";
-			this.showWindowToolStripMenuItem.Click += new System.EventHandler(this.showWindowToolStripMenuItem_Click);
+			this.showWindowToolStripMenuItem.Click += new System.EventHandler(this.ShowWindowToolStripMenuItem_Click);
 			// 
 			// tabControl1
 			// 
@@ -217,7 +217,7 @@ namespace ManagedSpy {
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
 			// 
 			// viewToolStripMenuItem
 			// 
@@ -238,7 +238,7 @@ namespace ManagedSpy {
 			this.filterEventsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
 			this.filterEventsToolStripMenuItem.Text = "Filter Events";
 			this.filterEventsToolStripMenuItem.ToolTipText = "Select which events to log";
-			this.filterEventsToolStripMenuItem.Click += new System.EventHandler(this.filterEventsToolStripMenuItem_Click);
+			this.filterEventsToolStripMenuItem.Click += new System.EventHandler(this.FilterEventsToolStripMenuItem_Click);
 			// 
 			// flashWindow
 			// 
@@ -246,7 +246,7 @@ namespace ManagedSpy {
 			this.flashWindow.Size = new System.Drawing.Size(192, 22);
 			this.flashWindow.Text = "Show Window";
 			this.flashWindow.ToolTipText = "Flashes the currently selected Control";
-			this.flashWindow.Click += new System.EventHandler(this.flashWindow_Click);
+			this.flashWindow.Click += new System.EventHandler(this.FlashWindow_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -259,7 +259,7 @@ namespace ManagedSpy {
 			this.refreshToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
 			this.refreshToolStripMenuItem.Text = "Refresh";
 			this.refreshToolStripMenuItem.ToolTipText = "Rescans active process and windows";
-			this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+			this.refreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -287,7 +287,7 @@ namespace ManagedSpy {
 			this.aboutManagedSpyToolStripMenuItem.Name = "aboutManagedSpyToolStripMenuItem";
 			this.aboutManagedSpyToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
 			this.aboutManagedSpyToolStripMenuItem.Text = "About ManagedSpy";
-			this.aboutManagedSpyToolStripMenuItem.Click += new System.EventHandler(this.aboutManagedSpyToolStripMenuItem_Click);
+			this.aboutManagedSpyToolStripMenuItem.Click += new System.EventHandler(this.AboutManagedSpyToolStripMenuItem_Click);
 			// 
 			// statusStrip1
 			// 
@@ -328,7 +328,7 @@ namespace ManagedSpy {
 			this.tsbuttonFilterEvents.Size = new System.Drawing.Size(23, 22);
 			this.tsbuttonFilterEvents.Text = "toolStripButton1";
 			this.tsbuttonFilterEvents.ToolTipText = "Select Events to Display";
-			this.tsbuttonFilterEvents.Click += new System.EventHandler(this.tsbuttonFilterEvents_Click);
+			this.tsbuttonFilterEvents.Click += new System.EventHandler(this.TsbuttonFilterEvents_Click);
 			// 
 			// tsbuttonRefresh
 			// 
@@ -339,7 +339,7 @@ namespace ManagedSpy {
 			this.tsbuttonRefresh.Size = new System.Drawing.Size(23, 22);
 			this.tsbuttonRefresh.Text = "toolStripButton1";
 			this.tsbuttonRefresh.ToolTipText = "Refresh Windows";
-			this.tsbuttonRefresh.Click += new System.EventHandler(this.tsbuttonRefresh_Click);
+			this.tsbuttonRefresh.Click += new System.EventHandler(this.TsbuttonRefresh_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -356,7 +356,7 @@ namespace ManagedSpy {
 			this.tsButtonStartStop.Size = new System.Drawing.Size(23, 22);
 			this.tsButtonStartStop.Text = "toolStripButton1";
 			this.tsButtonStartStop.ToolTipText = "Start/Stop Event Logging";
-			this.tsButtonStartStop.Click += new System.EventHandler(this.tsButtonStartStop_Click);
+			this.tsButtonStartStop.Click += new System.EventHandler(this.TsButtonStartStop_Click);
 			// 
 			// toolStripSeparator3
 			// 

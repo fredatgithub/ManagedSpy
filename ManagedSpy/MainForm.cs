@@ -25,7 +25,7 @@ namespace ManagedSpy {
 			InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
 			Application.Exit();
 		}
 
@@ -33,7 +33,7 @@ namespace ManagedSpy {
 			RefreshWindows();
 		}
 
-		private void refreshToolStripMenuItem_Click(object sender, EventArgs e) {
+		private void RefreshToolStripMenuItem_Click(object sender, EventArgs e) {
 			RefreshWindows();
 		}
 
@@ -82,7 +82,7 @@ namespace ManagedSpy {
 		/// <summary>
 		/// Called when the user selects a control in the treeview
 		/// </summary>
-		private void treeWindow_AfterSelect(object sender, TreeViewEventArgs e) {
+		private void TreeWindow_AfterSelect(object sender, TreeViewEventArgs e) {
 			this.propertyGrid.SelectedObject = this.treeWindow.SelectedNode.Tag;
 			this.toolStripStatusLabel1.Text = treeWindow.SelectedNode.Text;
 			StopLogging();
@@ -106,7 +106,7 @@ namespace ManagedSpy {
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void treeWindow_BeforeExpand(object sender, TreeViewCancelEventArgs e) {
+		private void TreeWindow_BeforeExpand(object sender, TreeViewCancelEventArgs e) {
 			foreach (TreeNode child in e.Node.Nodes) {
 				child.Nodes.Clear();
 				ControlProxy proxy = child.Tag as ControlProxy;
@@ -122,10 +122,11 @@ namespace ManagedSpy {
 			}
 		}
 
-		private void flashWindow_Click(object sender, EventArgs e) {
+		private void FlashWindow_Click(object sender, EventArgs e) {
 			FlashCurrentWindow();
 		}
-		private void showWindowToolStripMenuItem_Click(object sender, EventArgs e) {
+
+		private void ShowWindowToolStripMenuItem_Click(object sender, EventArgs e) {
 			FlashCurrentWindow();
 		}
 
@@ -187,7 +188,7 @@ namespace ManagedSpy {
 			}
 		}
 
-		private void tsButtonStartStop_Click(object sender, EventArgs e) {
+		private void TsButtonStartStop_Click(object sender, EventArgs e) {
 			StopLogging();
 			StartLogging();
 			if (tsButtonStartStop.Checked) {
@@ -202,7 +203,7 @@ namespace ManagedSpy {
 			StopLogging();
 		}
 
-		private void tsbuttonRefresh_Click(object sender, EventArgs e) {
+		private void TsbuttonRefresh_Click(object sender, EventArgs e) {
 			RefreshWindows();
 		}
 
@@ -210,24 +211,24 @@ namespace ManagedSpy {
 			this.eventGrid.Rows.Clear();
 		}
 
-		private void tsbuttonFilterEvents_Click(object sender, EventArgs e) {
+		private void TsbuttonFilterEvents_Click(object sender, EventArgs e) {
 			dialog.ShowDialog();
 			StopLogging();
 			StartLogging();
 		}
 
-		private void filterEventsToolStripMenuItem_Click(object sender, EventArgs e) {
+		private void FilterEventsToolStripMenuItem_Click(object sender, EventArgs e) {
 			dialog.ShowDialog();
 			StopLogging();
 			StartLogging();
 		}
 
-		private void aboutManagedSpyToolStripMenuItem_Click(object sender, EventArgs e) {
+		private void AboutManagedSpyToolStripMenuItem_Click(object sender, EventArgs e) {
 			HelpAbout about = new HelpAbout();
 			about.ShowDialog();
 		}
 
-		private void treeWindow_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+		private void TreeWindow_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
 		{
 			if (e.Button == MouseButtons.Right)
 			{
